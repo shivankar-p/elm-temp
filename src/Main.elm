@@ -256,8 +256,25 @@ view model =
         , HA.style "padding" "10px"
         ]
         [ V.viewCalc
-            [ VA.width 150
-            , VA.height 160
+            [ 
+               VA.radius 15
+              ,VA.color "blue"
+            , VA.shape "circle"
+            , VA.padding 15
+            , VA.cols 4
+            , VA.fontsize 16
+
+              {- VA.color "blue"
+             ,VA.padding 10
+             ,VA.box_rx 2
+             ,VA.cols 4 -}
+
+              {- -VA.shape "ellipse"
+            , VA.color "blue"
+            , VA.rx 15
+            , VA.ry 7
+            , VA.padding 10
+            , VA.cols 4- -}
             ]
             model.exp
             (String.fromInt (Maybe.withDefault 0 model.res))
